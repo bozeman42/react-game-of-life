@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Grid from './Grid';
 import GenerationCounter from './GenerationCounter';
 import ButtonBar from './ButtonBar';
+import SizeSelector from './SizeSelector';
+
 export default class App extends Component {
   constructor() {
     super();
@@ -136,6 +138,12 @@ export default class App extends Component {
     this.playButton();
   }
 
+  setGridSize = (width, height) => {
+    this.setState({
+      
+    })
+  }
+
   componentDidMount() {
     this.seed();
     this.playButton();
@@ -145,10 +153,10 @@ export default class App extends Component {
     return (
       <div>
         <h1>Game of Life</h1>
-        
         <ButtonBar speed={this.state.speed} seed={this.seed} slower={this.slower} setSpeed={this.setSpeed} faster={this.faster} play={this.playButton} stop={this.stop} />
         <Grid grid={this.state.grid} selectBox={this.selectBox} />
         <GenerationCounter generation={this.state.generation} />
+        <SizeSelector setGridSize = {this.setGridSize} />
       </div>
     );
   }

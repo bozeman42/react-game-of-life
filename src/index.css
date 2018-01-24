@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.grid {
+  margin: auto;
+  padding: 0;
+}
+
+.buttonBar {
+  text-align: center;
+}
+
+.cell {
+  width: 15px;
+  height: 15px;
+  border: solid 1px black;
+  float: left;
+  padding: 0;
+  margin: 0 0 -1px -1px;
+}
+
+.cell.alive {
+  background-color: deepskyblue;
+}
+
+.cell.dead {
+  background-color: white;
+}

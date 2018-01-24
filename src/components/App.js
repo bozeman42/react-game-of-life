@@ -5,8 +5,8 @@ import ButtonBar from './ButtonBar';
 export default class App extends Component {
   constructor() {
     super();
-    this.rows = 100;
-    this.cols = 100;
+    this.rows = 30;
+    this.cols = 50;
     this.state = {
       speed: 100,
       generation: 0,
